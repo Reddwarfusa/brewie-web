@@ -4,6 +4,11 @@ A self-hosted web interface for the **Brewie** homebrew machine. It replaces the
 *Brewie Control* app on any browser (phone, tablet, desktop) and runs as a small Docker
 container (no external dependencies, ~50 MB image on `node:22-alpine`).
 
+> **Unofficial project.** Brewie Web is an independent hobby project. It is not made, endorsed or
+> supported by Brewie or the ReBrewie firmware authors. "Brewie" is used only to name the machine it
+> works with. It controls heaters, pumps and valves on real hardware: use it at your own risk, and
+> stay near the machine while a program runs.
+
 **What it does**
 
 - **Live dashboard**: mash and boil temperatures, heater state, current phase and step,
@@ -114,3 +119,7 @@ Copy it to a Pi 3/4/5 or Zero 2 W running Raspberry Pi OS Lite (64-bit) and run 
 It installs Node.js if needed, puts the app in `/opt/brewie-web`, data in `/var/lib/brewie-web`, settings in
 `/etc/default/brewie-web`, and runs it as the `brewie-web` systemd service. Re-run a newer installer to update;
 `--uninstall` removes it (data kept). `--help` lists the options.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
