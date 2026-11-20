@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>brewie-web</Name>
+  <Repository>brewie-web:latest</Repository>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Overview>Web control panel for the Brewie homebrew machine: live temperatures and step progress, pause/resume/skip/stop, recipe sync and editing, cleaning and draining.</Overview>
+  <Category>HomeAutomation: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/default.png</Icon>
+  <Config Name="Web UI port" Target="8080" Default="8080" Mode="tcp" Description="Port for the web interface" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/brewie-web" Mode="rw" Description="Recipes, sync state and settings" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/brewie-web</Config>
+  <Config Name="Brewie IP" Target="BREWIE_HOST" Default="" Mode="" Description="IP address of the Brewie (can also be set in the web UI)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Brewie port" Target="BREWIE_PORT" Default="8001" Mode="" Description="Brewie control port (normally 8001)" Type="Variable" Display="advanced" Required="false" Mask="false">8001</Config>
+  <Config Name="Auth user" Target="AUTH_USER" Default="" Mode="" Description="Optional HTTP basic-auth user" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Auth password" Target="AUTH_PASS" Default="" Mode="" Description="Optional HTTP basic-auth password" Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
+  <Config Name="Demo mode" Target="SIMULATOR" Default="0" Mode="" Description="1 = run against a built-in simulated Brewie" Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+</Container>

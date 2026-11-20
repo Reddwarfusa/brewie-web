@@ -1,0 +1,1 @@
+{ "name": "Brewie Web", "short_name": "Brewie", "start_url": "./", "display": "standalone", "background_color": "#14110d", "theme_color": "#14110d", "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }] }

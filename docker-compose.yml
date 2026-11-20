@@ -1,0 +1,17 @@
+services:
+  brewie-web:
+    build: .
+    image: brewie-web:latest
+    container_name: brewie-web
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - BREWIE_HOST=192.168.1.50     # your Brewie's IP (Settings > WiFi on the machine)
+      - BREWIE_PORT=8001
+      - TZ=America/Los_Angeles
+      # - AUTH_USER=brewer          # optional basic auth
+      # - AUTH_PASS=change-me
+      # - SIMULATOR=1               # demo mode: built-in fake Brewie, ignores BREWIE_HOST
+    volumes:
+      - ./data:/data

@@ -1,0 +1,15 @@
+{
+  "name": "brewie-web",
+  "version": "1.13.0",
+  "description": "Self-hosted web control for the Brewie homebrew machine (protocol of Brewie Control 1.1.15)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "demo": "SIMULATOR=1 node src/server.js",
+    "simulator": "node src/simulator.js",
+    "test": "node test/integration.js && node test/single-slot.js && node test/drain-stall.js && node test/notify.js"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT",
+  "dependencies": {}
+}
